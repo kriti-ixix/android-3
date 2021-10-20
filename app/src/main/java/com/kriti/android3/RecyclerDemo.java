@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -53,11 +54,14 @@ public class RecyclerDemo extends AppCompatActivity {
         class MyViewHolder extends RecyclerView.ViewHolder
         {
             ImageView imageView; TextView textView;
+            LinearLayout linearLayout;
+
             public MyViewHolder(@NonNull View itemView)
             {
                 super(itemView);
                 imageView = itemView.findViewById(R.id.recyclerImage);
                 textView = itemView.findViewById(R.id.recyclerText);
+                linearLayout = itemView.findViewById(R.id.linearLayout);
             }
         }
 
@@ -74,7 +78,7 @@ public class RecyclerDemo extends AppCompatActivity {
             holder.imageView.setImageResource(images.get(position));
             holder.textView.setText(names.get(position));
 
-            holder.textView.setOnClickListener(new View.OnClickListener() {
+            holder.linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                    names.add("New");
