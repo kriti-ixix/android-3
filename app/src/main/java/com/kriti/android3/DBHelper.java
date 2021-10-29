@@ -2,10 +2,13 @@ package com.kriti.android3;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper
 {
@@ -39,6 +42,26 @@ public class DBHelper extends SQLiteOpenHelper
         SQLiteDatabase sq = this.getWritableDatabase();
         return sq.delete(TABLE_NAME, "where rollno = " + rn, null);
     }
+
+    ArrayList<StdInfo> getAllData()
+    {
+        SQLiteDatabase sq = this.getReadableDatabase();
+        Cursor cursor = sq.rawQuery("select * from " + TABLE_NAME, null);
+        ArrayList<StdInfo> list = new ArrayList<StdInfo>();
+
+        while (cursor.moveToNext())
+        {
+            StdInfo info = new StdInfo();
+            info.setsRollNo(cursor.getInt(0));
+            info.setsName(cursor.getString(1));
+            info.setsMarks(cursor.getDouble(2));
+            list.add(info);
+        }
+
+        return list;
+
+    }
+
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {

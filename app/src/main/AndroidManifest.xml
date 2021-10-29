@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android3">
         <activity
+            android:name=".StudentInf"
+            android:exported="true" />
+        <activity
             android:name=".InsertStudents"
             android:exported="true" />
         <activity
@@ -23,7 +26,7 @@
         </activity>
         <activity
             android:name=".RecyclerDemo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".FileHandling"
             android:exported="true" />
