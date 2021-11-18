@@ -7,9 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -37,6 +40,37 @@ public class IgClone extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(IgClone.this, "App Closed", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.my_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.menuOne)
+        {
+            Toast.makeText(IgClone.this, "One", Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.menuTwo)
+        {
+            Toast.makeText(IgClone.this, "Two", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(IgClone.this, "Three", Toast.LENGTH_SHORT).show();
+        }
+
+        return true;
     }
 
     class IgAdapter extends RecyclerView.Adapter<IgAdapter.IgViewHolder>
