@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_insert_students.xml" value="0.22056159420289856" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24592391304347827" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_my_context.xml" value="0.20969202898550723" />
         <entry key="app/src/main/res/layout/activity_recycler_demo.xml" value="0.20108695652173914" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.24592391304347827" />
         <entry key="app/src/main/res/layout/activity_student_inf.xml" value="0.5" />
@@ -18,6 +19,7 @@
         <entry key="app/src/main/res/layout/custom_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ig_clone_layout.xml" value="0.33" />
         <entry key="app/src/main/res/layout/recycler_layout.xml" value="0.20108695652173914" />
+        <entry key="app/src/main/res/menu/long_press_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/my_menu.xml" value="0.3098958333333333" />
       </map>
     </option>
