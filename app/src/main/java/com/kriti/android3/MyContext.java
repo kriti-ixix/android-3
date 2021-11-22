@@ -21,6 +21,13 @@ public class MyContext extends AppCompatActivity {
         button = findViewById(R.id.contextButton);
         registerForContextMenu(button);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MyContext.this, "Button is clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         button.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
